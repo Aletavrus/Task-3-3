@@ -1,0 +1,4 @@
+interface IManyDimension
+{
+    void EvenNumChange();
+}

@@ -1,0 +1,4 @@
+interface ITwoDimension
+{
+   int GetDeterminant();
+}

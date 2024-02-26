@@ -4,7 +4,7 @@
     private int[][] _array;
     public ManyDimension(bool userValues = false)
     {
-        Recreate(userValues);
+        CreateArray(userValues);
     }
 
     public override void Recreate(bool userValues = false)
@@ -17,14 +17,7 @@
         Console.WriteLine("Enter amount of arrays in a big array");
         int size = int.Parse(Console.ReadLine());
         _array = new int[size][];
-        if (!userValues)
-        {
-            RandomArray();
-        }
-        else
-        {
-            InputArray();
-        }
+        base.CreateArray(userValues);
     }
 
     protected override void InputArray()

@@ -8,7 +8,7 @@ sealed class TwoDimension : ArrayBase, ITwoDimension
     private int[,] _array;
     public TwoDimension(bool userValues = false)
     {
-        Recreate(userValues);
+        CreateArray(userValues);
     }
 
     public override void Recreate(bool userValues = false)
@@ -23,14 +23,7 @@ sealed class TwoDimension : ArrayBase, ITwoDimension
         Console.WriteLine("Enter amount of columns of an array");
         int column = int.Parse(Console.ReadLine());
         _array = new int[line, column];
-        if (!userValues)
-        {
-            RandomArray();
-        }
-        else
-        {
-            InputArray();
-        }
+        base.CreateArray(userValues);
     }
 
     protected override void InputArray()

@@ -5,7 +5,7 @@ sealed class OneDimension:ArrayBase, IOneDimension
     private int[] _array;
     public OneDimension(bool userValues = false)
     {
-        Recreate(userValues);
+        CreateArray(userValues);
     }
 
     public override void Recreate(bool userValues = false)
@@ -32,14 +32,7 @@ sealed class OneDimension:ArrayBase, IOneDimension
         Console.WriteLine("Enter size of an array");
         int size = int.Parse(Console.ReadLine());
         _array = new int[size];
-        if (!userValues)
-        {
-            RandomArray();
-        }
-        else
-        {
-            InputArray();
-        }
+        base.CreateArray(userValues);
     }
 
     protected override void RandomArray()

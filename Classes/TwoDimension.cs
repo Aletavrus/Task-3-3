@@ -4,7 +4,6 @@ using System.Drawing;
 
 sealed class TwoDimension : ArrayBase, ITwoDimension
 {
-    private Random random = new Random();
     private int[,] _array;
     public TwoDimension(bool userValues = false)
     {
@@ -47,7 +46,7 @@ sealed class TwoDimension : ArrayBase, ITwoDimension
         {
             for (int j = 0; j < _array.GetLength(1); j++)
             {
-                _array[i, j] = random.Next(0, 100);
+                _array[i, j] = _random.Next(0, 100);
             }
         }
     }

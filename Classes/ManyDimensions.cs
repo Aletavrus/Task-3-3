@@ -1,6 +1,5 @@
 ﻿sealed class ManyDimension : ArrayBase, IManyDimension
 {
-    private Random _random = new Random();
     private int[][] _array;
     public ManyDimension(bool userValues = false)
     {

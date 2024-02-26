@@ -1,6 +1,7 @@
 using System;
 public abstract class ArrayBase : IDimension
 {
+    protected static Random _random = new Random();
     protected abstract void InputArray();
     protected abstract void RandomArray();
     protected virtual void CreateArray(bool userValues = false)

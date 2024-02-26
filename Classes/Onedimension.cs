@@ -1,7 +1,6 @@
 ﻿
 sealed class OneDimension:ArrayBase, IOneDimension
 {
-    private Random _random = new Random();
     private int[] _array;
     public OneDimension(bool userValues = false)
     {
